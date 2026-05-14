@@ -27,4 +27,25 @@ savings = SavingsAccount("Alice", 1000)
 print(f"Initial balance: ${savings.get_balance()}\n")
 
 
+print("Test 1: Withdraw $50 (within $100 limit)")
+savings.withdraw(50)
+print(f"Balance: ${savings.get_balance()}\n")
+
+
+print("Test 2: Withdraw $100 (at the limit)")
+savings.withdraw(100)
+print(f"Balance: ${savings.get_balance()}\n")
+
+
+print("Test 3: Attempt to withdraw $150 (exceeds $100 limit)")
+savings.withdraw(150)
+print(f"Balance: ${savings.get_balance()}\n")
+
+
+print("Test 4: Attempt to withdraw $200 (more than balance)")
+savings.withdraw(200)
+print(f"Balance: ${savings.get_balance()}\n")
+
+
+print("Test 5: Apply interest")
 savings.apply_interest()
